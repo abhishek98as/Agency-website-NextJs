@@ -47,10 +47,12 @@ export function Navbar() {
                     </div>
 
                     <div className={styles.actions}>
-                        <ModernThemeToggle />
-                        <Link href="/contact-sales" className={cn(styles.btn, styles["btn-ghost"])}>
+                        <button 
+                            onClick={() => window.location.href = '/contact-sales'}
+                            className={cn(styles.btn, styles["btn-ghost"])}
+                        >
                             Contact Sales
-                        </Link>
+                        </button>
                         <Link href="/request-demo" className={cn(styles.btn, styles["btn-primary"])}>
                             Request Demo
                         </Link>
@@ -83,13 +85,15 @@ export function Navbar() {
                     </Link>
                 ))}
                 <hr className="border-gray-800" />
-                <Link
-                    href="/contact-sales"
+                <button
+                    onClick={() => {
+                        window.location.href = '/contact-sales'
+                        setMobileOpen(false)
+                    }}
                     className={cn(styles.btn, styles["btn-ghost"], "text-center")}
-                    onClick={() => setMobileOpen(false)}
                 >
                     Contact Sales
-                </Link>
+                </button>
                 <Link
                     href="/request-demo"
                     className={cn(styles.btn, styles["btn-primary"], "text-center")}
