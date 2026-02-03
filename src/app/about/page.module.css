@@ -1,0 +1,51 @@
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.title {
+  font-family: var(--font-outfit);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.content {
+  padding: 80px 0;
+}
+.textBlock {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--foreground);
+}
+.textBlock p {
+  margin-bottom: 24px;
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+.statItem {
+  text-align: center;
+}
+.statNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+.statLabel {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

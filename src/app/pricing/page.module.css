@@ -1,0 +1,64 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  padding: 60px 24px;
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+}
+.featured {
+  border-color: var(--primary);
+  background: rgba(37, 99, 235, 0.05);
+}
+.planName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: var(--font-outfit);
+}
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.period {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  display: block;
+}
+.features {
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.feature {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btnPrimary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}

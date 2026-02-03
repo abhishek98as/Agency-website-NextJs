@@ -1,0 +1,96 @@
+/* Modern Theme Toggle with SVG Animation */
+.themeToggleButton {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2.5em;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.placeholder {
+  width: 4em;
+  height: 2.5em;
+  background: rgba(131, 203, 216, 0.2);
+  border-radius: 17.5px;
+  opacity: 0.3;
+}
+
+/* Hide default HTML checkbox */
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.themeToggleButton svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Transition properties */
+.themeToggleButton #container,
+.themeToggleButton #patches,
+.themeToggleButton #stars,
+.themeToggleButton #button,
+.themeToggleButton #sun,
+.themeToggleButton #moon,
+.themeToggleButton #cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.4s;
+}
+
+/* Night sky background */
+.toggle:checked ~ svg #container {
+  fill: #2b4360 !important;
+}
+
+/* Move button to right when checked */
+.toggle:checked ~ svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* Show/hide sun and moon based on checkbox state */
+.themeToggleButton #sun {
+  opacity: 1;
+}
+
+.toggle:checked ~ svg #sun {
+  opacity: 0;
+}
+
+.themeToggleButton #moon {
+  opacity: 0;
+}
+
+.toggle:checked ~ svg #moon {
+  opacity: 1;
+}
+
+/* Show or hide background items on checkbox state */
+.themeToggleButton #cloud {
+  opacity: 1;
+}
+
+.toggle:checked ~ svg #cloud {
+  opacity: 0;
+}
+
+.themeToggleButton #stars {
+  opacity: 0;
+}
+
+.toggle:checked ~ svg #stars {
+  opacity: 1;
+}
+
+/* Hover effect */
+.themeToggleButton:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
