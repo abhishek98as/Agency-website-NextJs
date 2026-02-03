@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "git add -A && git commit -m \"Update: $(date +\"%Y-%m-%d %H:%M\")\" && git push origin main",
+    "quick-push": "git add -A && git commit && git push origin main"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.31.0",
     "lucide-react": "^0.563.0",
